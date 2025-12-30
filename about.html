@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodaMars — Brand Story</title>
+
+    <style>
+      :root {
+        --bg: #0b0f1a;
+        --fg: #f4f6ff;
+        --muted: rgba(244, 246, 255, 0.72);
+        --line: rgba(244, 246, 255, 0.14);
+        --max: 980px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Simple landing layout */
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        font-size: 18px;
+      }
+      .navlinks {
+        display: flex;
+        gap: 16px;
+        color: var(--muted);
+        font-size: 14px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 48px 0 24px;
+      }
+      .hero h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 5vw, 56px);
+        letter-spacing: -0.6px;
+        line-height: 1.05;
+      }
+      .hero p {
+        margin: 0;
+        max-width: 62ch;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .card {
+        margin-top: 36px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 28px 24px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+      .card h2 {
+        margin: 0 0 12px;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        color: var(--muted);
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .manifesto {
+        margin: 0;
+        font-size: 18px;
+      }
+      .manifesto p {
+        margin: 0 0 14px;
+      }
+      .manifesto p:last-child {
+        margin-bottom: 0;
+      }
+
+      .footer {
+        margin-top: 36px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: var(--muted);
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--line);
+        margin: 18px 0;
+      }
+
+      @media (max-width: 520px) {
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="nav">
+        <div class="brand">CodaMars</div>
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#story">Story</a>
+          <a href="#meaning">Meaning</a>
+          <a href="#mindset">Mindset</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="story">
+        <div class="pill" aria-label="Tagline">
+          <span>✦</span>
+          <span>Where ideas go far — and ship well.</span>
+        </div>
+
+        <h1>The story behind CodaMars</h1>
+        <p>
+          CodaMars was born from the combination of two ideas that define how we
+          create products: exploration and execution. We believe in going far —
+          and finishing well.
+        </p>
+      </section>
+
+      <section class="card" aria-label="Brand story">
+        <h2>Coda</h2>
+        <div class="manifesto">
+          <p>
+            In music, a <em>coda</em> is the final passage that brings a
+            composition to a meaningful close. It’s not just an ending — it’s
+            where everything comes together with intention.
+          </p>
+          <p>
+            For us, <strong>Coda</strong> represents finishing what we start,
+            caring about craft, quality, and coherence, and turning ideas into
+            products that work in the real world. Good ideas matter — but
+            execution is what gives them value.
+          </p>
+        </div>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <h2>Mars</h2>
+        <div class="manifesto">
+          <p>
+            Mars has always symbolized exploration, experimentation, and the
+            next frontier. It represents the courage to explore new territories,
+            build without a ready-made map, and create what doesn’t exist yet.
+          </p>
+          <p>
+            <strong>Mars</strong> is about curiosity, ambition, and the
+            willingness to go beyond the obvious — whether we’re building
+            software, platforms, games, or entirely new digital experiences.
+          </p>
+        </div>
+      </section>
+
+      <section class="card" id="meaning" aria-label="Meaning">
+        <h2>What CodaMars means</h2>
+        <div class="manifesto">
+          <p>
+            <strong>CodaMars</strong> lives at the intersection of exploration
+            and execution. We believe in experimenting — and delivering with
+            intention.
+          </p>
+          <p>
+            Whether we’re building software, platforms, or games, our focus is
+            the same: to turn bold ideas into thoughtful, well-crafted products.
+          </p>
+          <p>
+            We don’t just start projects. We take them all the way.
+          </p>
+        </div>
+      </section>
+
+      <section class="card" id="mindset" aria-label="Mindset">
+        <h2>Our mindset</h2>
+        <div class="manifesto">
+          <p>At CodaMars:</p>
+          <p>
+            • Software is treated as a product, not just technology.<br />
+            • Games are experiences, not just entertainment.<br />
+            • Platforms are built to evolve, not to lock people in.<br />
+            • Every creation must earn its place in the world.
+          </p>
+          <p>
+            We explore. We build. We refine. And we ship with purpose.
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer" aria-label="Footer">
+        <div>© <span id="year"></span> CodaMars</div>
+        <div>Built for SaaS, games, and whatever comes next.</div>
+      </footer>
+    </div>
+
+    <script>
+      // Simple, safe year injection
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
