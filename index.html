@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CodaMars</title>
-    <meta name="description" content="CodeMars — Manifesto" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodaMars — Brand Story</title>
+
     <style>
       :root {
         --bg: #0b0f1a;
@@ -40,11 +40,17 @@
         letter-spacing: 0.4px;
         font-size: 18px;
       }
+       .brand i{
+        font-weight: normal;
+        letter-spacing: 0.4px;
+        font-size: 14px;
+      }
       .navlinks {
         display: flex;
         gap: 16px;
         color: var(--muted);
         font-size: 14px;
+        flex-wrap: wrap;
       }
 
       .hero {
@@ -101,6 +107,33 @@
         font-size: 13px;
       }
 
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: var(--muted);
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--line);
+        margin: 18px 0;
+      }
+
       @media (max-width: 520px) {
         .nav {
           flex-direction: column;
@@ -112,9 +145,22 @@
 
   <body>
     <div class="container">
-      <section class="hero">
-        <h1><b>Coda</b>Mars</h1>
-        <div class="manifesto">
+      <header class="nav">
+        <div class="brand">CodaMars<br><i>Every great future begins with a dream.</i></div>
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#story">Story</a>
+          <a href="#meaning">Meaning</a>
+          <a href="#mindset">Mindset</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="story">
+        <div class="pill" aria-label="Tagline">
+          <span>✦</span>
+          <span>Where ideas go far — and ship well.</span>
+        </div>
+
+                <div class="manifesto">
           <p>Every great future begins with a dream.</p>
           <p>
             We explore the unknown, transform ideas into software, and push
@@ -127,13 +173,90 @@
         </div>
       </section>
 
-      <section id="contact" class="footer" aria-label="Footer">
-        <div>© <span id="year"></span> CodaMars</div>
-        <div><a href="mailto:hello@codemars.com">hello@codamars.com</a></div>
+
+        <h1>The story behind CodaMars</h1>
+        <p>
+          CodaMars was born from the combination of two ideas that define how we
+          create products: exploration and execution. We believe in going far —
+          and finishing well.
+        </p>
       </section>
+
+      <section class="card" aria-label="Brand story">
+        <h2>Coda</h2>
+        <div class="manifesto">
+          <p>
+            In music, a <em>coda</em> is the final passage that brings a
+            composition to a meaningful close. It’s not just an ending — it’s
+            where everything comes together with intention.
+          </p>
+          <p>
+            For us, <strong>Coda</strong> represents finishing what we start,
+            caring about craft, quality, and coherence, and turning ideas into
+            products that work in the real world. Good ideas matter — but
+            execution is what gives them value.
+          </p>
+        </div>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <h2>Mars</h2>
+        <div class="manifesto">
+          <p>
+            Mars has always symbolized exploration, experimentation, and the
+            next frontier. It represents the courage to explore new territories,
+            build without a ready-made map, and create what doesn’t exist yet.
+          </p>
+          <p>
+            <strong>Mars</strong> is about curiosity, ambition, and the
+            willingness to go beyond the obvious — whether we’re building
+            software, platforms, games, or entirely new digital experiences.
+          </p>
+        </div>
+      </section>
+
+      <section class="card" id="meaning" aria-label="Meaning">
+        <h2>What CodaMars means</h2>
+        <div class="manifesto">
+          <p>
+            <strong>CodaMars</strong> lives at the intersection of exploration
+            and execution. We believe in experimenting — and delivering with
+            intention.
+          </p>
+          <p>
+            Whether we’re building software, platforms, or games, our focus is
+            the same: to turn bold ideas into thoughtful, well-crafted products.
+          </p>
+          <p>
+            We don’t just start projects. We take them all the way.
+          </p>
+        </div>
+      </section>
+
+      <section class="card" id="mindset" aria-label="Mindset">
+        <h2>Our mindset</h2>
+        <div class="manifesto">
+          <p>At CodaMars:</p>
+          <p>
+            • Software is treated as a product, not just technology.<br />
+            • Games are experiences, not just entertainment.<br />
+            • Platforms are built to evolve, not to lock people in.<br />
+            • Every creation must earn its place in the world.
+          </p>
+          <p>
+            We explore. We build. We refine. And we ship with purpose.
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer" aria-label="Footer">
+        <div>© <span id="year"></span> CodaMars</div>
+        <div>Built for SaaS, games, and whatever comes next.</div>
+      </footer>
     </div>
 
     <script>
+      // Simple, safe year injection
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
